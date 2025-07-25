@@ -1,10 +1,6 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
+import { createElement } from 'react';
+import ReactDOM from 'react-dom/client';
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+const element = createElement('h3', { className: 'title' }, 'У меня в штанах две пушки. Один - огнестрел. Второй - для подружки.  © Джейсон Cтетхэм');
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(element);
